@@ -63,8 +63,10 @@ if [ -n "$2" ]; then
 	rm -rf $GITREPO &&
 	git init $GITREPO &&
 	cp $2 $GITREPO/$1.xml &&
+	cp base-jb.xml $GITREPO/base-jb.xml &&
 	cd $GITREPO &&
 	git add $1.xml &&
+	git add base-jb.xml
 	git commit -m "manifest" &&
 	git branch -m $BRANCH &&
 	cd ..
@@ -107,6 +109,13 @@ case "$1" in
 
 "nexus-s-4g")
 	echo DEVICE=crespo4g >> .tmp-config &&
+	repo_sync $1
+	;;
+
+"Kindle-Fire-HD7")
+	echo DEVICE=tate >> .tmp-config &&
+	echo VENDOR=amazon >> .tmp-config &&
+	echo LUNCH=full_tate-eng >> .tmp-config &&
 	repo_sync $1
 	;;
 
