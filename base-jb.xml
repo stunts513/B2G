@@ -12,7 +12,7 @@
   <project name="stunts513/platform_build" path="build" remote="gh" revision="b2g-4.3_r2.1">
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
-  <project name="stunts513/gecko" path="gecko" remote="gh" revision="master" />
+  <project name="gecko.git" path="gecko" remote="mozillaorg" revision="master" />
   <project name="rilproxy" path="rilproxy" remote="b2g" revision="master"/>
   <project name="fake-libdvm" path="dalvik" remote="b2g" revision="master"/>
   <project name="gaia" path="gaia" remote="mozillaorg" revision="master"/>
