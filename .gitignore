@@ -1,6 +1,5 @@
 .config
 .repo/
-.userconfig
 .var.profile
 *.swp
 *.pyc
