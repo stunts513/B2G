@@ -117,10 +117,10 @@ case "$1" in
 	repo_sync $1
 	;;
 
-"Kindle-Fire-HD7")
-	echo DEVICE=tate >> .tmp-config &&
+"tate"|"jem"|"otter2"|"otter")
+	echo DEVICE=$1 >> .tmp-config &&
 	echo VENDOR=amazon >> .tmp-config &&
-	echo LUNCH=full_tate-eng >> .tmp-config &&
+	echo LUNCH=full_$1-eng >> .tmp-config &&
 	repo_sync $1
 	;;
 
