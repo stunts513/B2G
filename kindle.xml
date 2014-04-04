@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<manifest>
+
+  <include name="base-jb.xml"/>
+
+  <remote fetch="git://github.com/" name="gh" />
+
+  <default remote="caf" revision="refs/tags/android-4.3_r2.1" sync-j="4"/>
+
+  <!-- Stock AOSP things we need -->
+  <project name="platform/external/apache-http" path="external/apache-http"/>
+  <project name="platform/external/clang" path="external/clang"/>
+  <project name="platform/external/compiler-rt" path="external/compiler-rt"/>
+  <project name="platform/external/libphonenumber" path="external/libphonenumber"/>
+  <project name="platform/external/llvm" path="external/llvm"/>
+  <project name="platform/external/nist-sip" path="external/nist-sip"/>
+  <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8"/>
+  <project name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc"/>
+  <project name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker"/>
+  <project name="platform/frameworks/opt/net/voip" path="frameworks/opt/net/voip"/>
+  <project name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony"/>
+  <project name="platform/frameworks/rs" path="frameworks/rs"/>
+  <project name="platform/frameworks/support" path="frameworks/support"/>
+
+  <!-- Amazon Kindle Projects -->
+  <project path="kernel/amazon/otter-common" name="KFire-Android/kernel_omap_otter-common" remote="gh" revision="cm-10.2" />
+  <project path="kernel/amazon/bowser-common" name="KFire-Android/kernel_omap_bowser-common" remote="gh" revision="cm-10.2" />
+  <project path="device/amazon/omap4-common" name="stunts513/android_device_amazon_omap4-common" remote="gh" revision="cm-10.2" />
+  <project path="device/amazon/otter-common" name="stunts513/android_device_amazon_otter-common" remote="gh" revision="cm-10.2" />
+  <project path="device/amazon/bowser-common" name="stunts513/android_device_amazon_bowser-common" remote="gh" revision="cm-10.2" />
+  <project path="device/amazon/otter" name="stunts513/android_device_amazon_otter" remote="gh" revision="cm-10.2" />
+  <project path="device/amazon/otter2" name="stunts513/android_device_amazon_otter2" remote="gh" revision="cm-10.2" />
+  <project path="device/amazon/tate" name="stunts513/android_device_amazon_tate" remote="gh" revision="cm-10.2" />
+  <project path="device/amazon/jem" name="stunts513/android_device_amazon_jem" remote="gh" revision="cm-10.2" />
+  <project path="vendor/amazon" name="stunts513/proprietary_vendor_amazon" remote="gh" revision="cm-10.2" />
+
+</manifest>
