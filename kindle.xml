@@ -4,6 +4,7 @@
   <include name="base-jb.xml"/>
 
   <remote fetch="git://github.com/" name="gh" />
+  <remote fetch="git://git.omapzoom.org/" name="ti" />
 
   <default remote="caf" revision="refs/tags/android-4.3_r2.1" sync-j="4"/>
 
@@ -15,6 +16,7 @@
   <project name="platform/external/llvm" path="external/llvm"/>
   <project name="platform/external/nist-sip" path="external/nist-sip"/>
   <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8"/>
+  <project name="platform/external/wpa_supplicant_8_ti.git" path="external/wpa_suplicant_8_ti" remote="ti" revision="d-jb-mr2.0-release"/>
   <project name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc"/>
   <project name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker"/>
   <project name="platform/frameworks/opt/net/voip" path="frameworks/opt/net/voip"/>
