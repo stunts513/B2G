@@ -238,8 +238,11 @@ def notify_and_pull_files(outfiles_prefixes,
         sys.stdout.write('\rGot %d/%d files.' % (files_gotten, files_expected))
         sys.stdout.flush()
 
-        if files_gotten == files_expected:
+        if files_gotten >= files_expected:
             print('')
+            if files_gotten > files_expected:
+                print("WARNING: Got more files than expected!")
+                print("(Is MOZ_IGNORE_NUWA_PROCESS set incorrectly?)")
             break
 
         sleep(wait_interval)
@@ -257,7 +260,7 @@ def notify_and_pull_files(outfiles_prefixes,
     if files_gotten < files_expected:
         print('')
         print("We've waited %ds but the only relevant files we see are" % max_wait)
-        print('\n'.join(['  ' + f for f in new_files + new_unified_files]))
+        print('\n'.join(['  ' + f for f in new_files | new_unified_files]))
         print('We expected %d but see only %d files.  Giving up...' %
               (files_expected, files_gotten))
         raise Exception("Unable to pull some files.")
