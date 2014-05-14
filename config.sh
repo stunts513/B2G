@@ -30,7 +30,7 @@ case `uname` in
 	exit -1
 esac
 
-GITREPO=${GITREPO:-"git://github.com/mozilla-b2g/b2g-manifest"}
+GITREPO=${GITREPO:-"git://github.com/stunts513/b2g-manifest"}
 BRANCH=${BRANCH:-master}
 
 while [ $# -ge 1 ]; do
@@ -63,10 +63,8 @@ if [ -n "$2" ]; then
 	rm -rf $GITREPO &&
 	git init $GITREPO &&
 	cp $2 $GITREPO/$1.xml &&
-	cp base-jb.xml $GITREPO/base-jb.xml &&
 	cd $GITREPO &&
 	git add $1.xml &&
-	git add base-jb.xml
 	git commit -m "manifest" &&
 	git branch -m $BRANCH &&
 	cd ..
