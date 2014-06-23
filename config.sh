@@ -122,6 +122,11 @@ case "$1" in
 	repo_sync $1
 	;;
 
+"p760")
+	echo DEVICE=p760 >> .tmp-config &&
+	repo_sync $1
+	;;
+
 "otoro"|"unagi"|"keon"|"inari"|"leo"|"hamachi"|"peak"|"helix"|"wasabi")
 	echo DEVICE=$1 >> .tmp-config &&
 	repo_sync $1
@@ -215,6 +220,11 @@ case "$1" in
 	echo - emulator-x86
 	echo - emulator-x86-jb
 	echo - emulator-x86-kk
+	echo - tate
+	echo - jem
+	echo - otter
+	echo - otter2
+	echo - p760
 	exit -1
 	;;
 esac
